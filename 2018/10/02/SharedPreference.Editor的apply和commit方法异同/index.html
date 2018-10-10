@@ -86,7 +86,7 @@
 <meta property="og:site_name" content="Mecewe&#39; Blog">
 <meta property="og:description" content="####apply方法在官方SDK说明如下： Commit your preferences changes back from this Editor to the SharedPreferences object it is editing. This atomically performs the requested modifications, replacing whatever is">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-10-01T16:42:37.431Z">
+<meta property="og:updated_time" content="2018-10-10T13:56:02.704Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="SharedPreference.Editor的apply和commit方法异同">
 <meta name="twitter:description" content="####apply方法在官方SDK说明如下： Commit your preferences changes back from this Editor to the SharedPreferences object it is editing. This atomically performs the requested modifications, replacing whatever is">
@@ -237,7 +237,7 @@
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Mecewe">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="image" content="/images/first.png">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -306,6 +306,7 @@
 <p>As SharedPreferences instances are singletons within a process, it’s safe to replace any instance of commit with apply if you were already ignoring the return value.</p>
 <p>You don’t need to worry about Android component lifecycles and their interaction with apply() writing to disk. The framework makes sure in-flight disk writes from apply() complete before switching states.</p>
 <p>The SharedPreferences.Editor interface isn’t expected to be implemented directly. However, if you previously did implement it and are now getting errors about missing apply(), you can simply call commit from apply().</p>
+<a id="more"></a>
 <p>####这两个方法的区别在于：</p>
 <ol>
 <li>apply没有返回值而commit返回boolean表明修改是否提交成功 </li>
@@ -405,6 +406,10 @@
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
+              <img class="site-author-image" itemprop="image"
+                src="/images/first.png"
+                alt="Mecewe" />
+            
               <p class="site-author-name" itemprop="name">Mecewe</p>
               <p class="site-description motion-element" itemprop="description"></p>
           </div>
@@ -457,7 +462,9 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+        <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+<div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
   <span class="with-love">
     <i class="fa fa-user"></i>
   </span>
@@ -471,11 +478,9 @@
 
 
 
-  <span class="post-meta-divider">|</span>
-
-
-
   <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Mist</a> v5.1.4</div>
+
+
 
 
 
